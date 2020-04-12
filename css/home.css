@@ -136,17 +136,18 @@ color: black;
 
 .refresh{
   right:15px;
-	cursor:'pointer';
+cursor:'pointer';
   position:fixed;
    bottom:75px;
   }
+
   .toTop{
-    width: 50px;
-		height: 50px;
-		bottom:10px;
-		right:15px;
-		position:fixed;
-		cursor:pointer;
+   width: 50px;
+   height: 50px;
+   bottom:10px;
+right:15px;
+position:fixed;
+cursor:pointer;
     }
 
   .column{
