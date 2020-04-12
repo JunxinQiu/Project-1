@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+     <meta charset="UTF-8">
+     <link href="../css/upload.css" rel="stylesheet" type="text/css">
+     <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script> 
+     <title>My Collections</title>
+ </head>
+
+ <body>
+    <header>
+        <nav class="navbar">
+        <div class="navbarheader">
+           <ul class="menu_1">
+             <li><a href="home.html">
+              <img src="../../img/icons/githublogo.png" width="32" height="32">
+              </a></li>
+             <li><a href="home.html"><font color="white">Home</font></li></a>
+             <li><a href="browse.html"><font color="white">Browse</font></li></a>
+             <li><a href="search.html"><font color="white">Search</font></li></a>
+           </ul>
+     
+           <ul class="menu_right">
+             <li class="has-submenu">My Account
+               <ul>
+                 <li><a href="upload.html"><img src="../../img/icons/shangchuan.png" width="20" height="20">  <font color="white">Upload</font></li></a>
+                 <li><a href="myphotos.html"><img src="../../img/icons/tupian.png" width="20" height="20">  <font color="white">My Photos</font></li></a>
+                 <li><a href="mycollections.html"><img src="../../img/icons/shoucang.png" width="20" height="20">  <font color="white">My Collections</font></li></a>
+                 <li><a href="../../index.html"><img src="../../img/icons/gengduo.png" width="20" height="20">  <font color="white">Log In</font></li></a>
+               </ul>
+             </li>
+           </ul>
+         </div>
+        </nav>
+        </header>
+        <div class="bodyplaceholder">
+            <div class='menuheader'>Upload</div>
+            <div class='menu' style="text-align: center;">
+                <h3>上传你的照片！</h3>  
+    <form name="form0" id="form0">  
+        <input type="file" name="file0" id="file0" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"><br>  
+        <img src=" " id="img0" style="width: 20rem;height: 15rem;">
+    </form>   
+    <script type="text/javascript">
+        $("#file0").change(function(){  
+        var objUrl = getObjectURL(this.files[0]) ;//获取文件信息  
+        console.log("objUrl = "+objUrl);  
+            if (objUrl) {  
+                  $("#img0").attr("src", objUrl);  
+            }   
+        });
+        function getObjectURL(file) {  
+            var url = null;   
+            if(window.createObjectURL!=undefined) {  
+                url = window.createObjectURL(file) ;  
+            }else if (window.URL!=undefined) { // mozilla(firefox)  
+                url = window.URL.createObjectURL(file) ;  
+            }else if (window.webkitURL!=undefined) { // webkit or chrome  
+                url = window.webkitURL.createObjectURL(file) ;  
+            }  
+            return url ;  
+        }  
+    </script>
+            </div>
+            <div class='menuheader'>Details</div>
+            <div class='menu' style="text-align: center;">
+                <form action="myphotos.html" method="GET">
+                <ul>
+                    <p>
+                        图片标题：<br>
+                        <input type="text" name="title" style="width: 100%;">
+                    </p>
+                </ul>
+                <ul>
+                    <p>
+                        图片描述：<br>
+                        <input type="text" name="description" style="width: 100%;">
+                    </p>
+                </ul>
+                <ul>
+                    <p>
+                        拍摄国家：<br>
+                        <input type="text" name="countries" style="width: 100%;">
+                    </p>
+                </ul>
+                <ul>
+                    <p>
+                        拍摄城市：<br>
+                        <input type="text" name="cities" style="width: 100%;">
+                    </p>
+                </ul>
+                <ul>
+                    <div>
+                        <input type="submit" value="submit" name="submit" onclick="alert('图片已提交')"><img src="../../img/icons/shangchuan.png" alt="..." style=width:50px;>
+                 </div>
+                    </ul>
+                </form>
+            </div>
+
+        </div>
+        <footer>
+            <table class="container">
+                  <tr>
+                      <td style="width: 20%; height: 100%;"><div>    使用条款    </div></td>
+                      <td style="width: 20%; height: 100%"><div>    隐私保护    </div></td>
+                      <td style="width: 20%; height: 100%"><div>    Cookie    </div></td>
+                      <td style="width: 20%; height: 100%"><div>    关于    </div></td>
+                      <td style="width: 20%; height: 100%"><div>    联系我们    </div></td>
+                </tr>
+            </table>
+            <div id="copyrightRow">
+               <div class="container">
+                  <div class="row">
+                    <p class="copyright">Copyright © 2019-2021 Web fundamental. All Rights Reserved. 备案号：pj进度+=0；绩点--；怕是要死在12号-我不要开学</p>
+                  </div>
+               </div>
+            </div>
+         </footer>
+        </body>
